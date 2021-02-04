@@ -29,7 +29,6 @@ router.post('/registration',
       res.json({ message: "User was created" })
     } catch (e) {
       console.log(e)
-      console.log(e)
       res.send({ message: "Server error" })
     }
   })
@@ -75,7 +74,6 @@ router.get('/auth', authMiddleware,
           id: user.id,
           email: user.email,
           diskSpace: user.diskSpace,
-          usedSpace: user.usedSpace,
           avatar: user.avatar
         }
       })

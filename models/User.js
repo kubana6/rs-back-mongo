@@ -5,7 +5,7 @@ const User = new Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   diskSpace: { type: Number, default: 1024 ** 3 * 10 },
-  events: { type: Object, required: true },
+  events: { type: Object },
   avatar: { type: String },
   files: [{ type: ObjectId, ref: 'File' }]
 })

@@ -20,7 +20,7 @@ const getCollection = async () => {
 
 const listAll = async (idUser) => {
   const collection = await getCollection();
-  return collection.find({ userId: idUser }).toArray();
+  return collection.find({ idUser }).toArray();
 };
 
 const getById = async (id) => {
@@ -39,7 +39,6 @@ const update = async (item) => {
   const id = item.id;
 
   const response = await collection.replaceOne({ id }, item);
-  console.log(`response to update ${response}`)
   return response.ops[0];
 };
 
